@@ -21,7 +21,7 @@ public class CustomerController {
 
         Customer customer = new Customer();
         customer.setFirstName(firstName);
-        customer.setLastName(firstName);
+        customer.setLastName(lastName);
         customer.setEmail(email);
         customerRepository.save(customer);
         return "User Created";
