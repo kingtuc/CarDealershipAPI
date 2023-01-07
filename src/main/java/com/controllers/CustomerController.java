@@ -32,4 +32,13 @@ public class CustomerController {
         return customerRepository.findAll();
     }
 
+    @GetMapping(path = "/byEmail")
+    public @ResponseBody Customer findCustomerByEmail(@RequestParam String email){
+        return customerRepository.findByEmail(email);
+    }
+    @GetMapping(path= "/byFirstName")
+    public @ResponseBody Customer findByFirstName(@RequestParam String firstName){
+        return customerRepository.findByFirstName(firstName);
+    }
+
 }
